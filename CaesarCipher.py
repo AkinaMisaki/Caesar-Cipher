@@ -15,7 +15,6 @@ def caesar(): # Função principal
 
         numlt = ord(char) + rotat # Transforma o número dos caractéres da tabela ASCII e adiciona o número de rotações
 
-
         if char.isupper() == True: # Verifica se é uma letra maiúscula e garante que fique dentro do alfabeto de A-Z
             if numlt >= 90:
                 numlt -= 26
