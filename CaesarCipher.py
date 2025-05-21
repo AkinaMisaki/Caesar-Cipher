@@ -1,5 +1,7 @@
 import os
 
+saida = ""
+
 def clear(): # Função para limpar a tela
     os.system('cls' if os.name == 'nt' else 'clear')
 
@@ -32,7 +34,7 @@ def caesar(): # Função principal
     
     return crypt # Retorna a variável crypt para ser utilizada
 
-while True: # Roda o código até o usuário decidir parar
+while saida.lower() != "sair": # Roda o código até o usuário decidir parar
 
     texto = input("Insira o texto:\n")
     rotat = int(input("\nInsira quantas posições será movido: (Positivo = Direita; Negativo = Esquerda):\n"))
@@ -42,14 +44,11 @@ while True: # Roda o código até o usuário decidir parar
 
     saida = input('Aperte enter para continuar ou digite "Sair" para fechar o programa\n')
 
-    if saida.lower() == "sair":
-        exit()
-    else:
-        clear()
-        continue
+    clear()
 
 # Exemplo utilizado pelo professor em sala de aula:
 # Suhpdwxuh rswlplcdwlrq lv wkh urrw ri doo hylo
+# (3 caractéres para esquerda/ -3 posições)
 # PREMATURE OPTIMIZATION IS THE ROOT OF ALL EVIL
 
 # String teste
